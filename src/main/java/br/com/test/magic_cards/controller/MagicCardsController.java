@@ -13,7 +13,6 @@ public class MagicCardsController {
     @Autowired private MagicCardsService service;
     @PostMapping("/createMagicCard")
     public ResponseEntity<MagicCardResponseDTO> createMagicCard(
-            @RequestHeader ("ListIndex") Integer listIndex,
             @RequestBody MagicCardDTO magicCard
     ) {
         return ResponseEntity.ok().body(service.createMagicCard(magicCard));
