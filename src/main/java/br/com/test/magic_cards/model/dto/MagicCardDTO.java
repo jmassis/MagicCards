@@ -9,8 +9,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MagicCardDTO {
-    private Integer indexCard;
-    private Integer indexList;
     private String name;
     private String edition;
     private LanguageEnum language;

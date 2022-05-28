@@ -1,13 +1,14 @@
 package br.com.test.magic_cards.service;
 
 import br.com.test.magic_cards.dao.MagicCardDao;
+import br.com.test.magic_cards.keys.MagicCardsKeys;
 import br.com.test.magic_cards.model.dto.MagicCardDTO;
 import br.com.test.magic_cards.model.dto.MagicCardResponseDTO;
 import br.com.test.magic_cards.model.entities.Card;
+import br.com.test.magic_cards.util.FormatterUtil;
 import br.com.test.magic_cards.util.JPAUtil;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
@@ -18,18 +19,27 @@ public class MagicCardsService {
 
     public MagicCardResponseDTO createMagicCard(MagicCardDTO card) {
         log.info("Init MagicCardsService :: createMagicCard :: Card={}",gson.toJson(card));
+        try {
         var cardEntity = Card.builder()
                 .edition(card.getEdition())
                 .foil(card.isFoil())
-                .language(card.getLanguage())
+                .language(card.getLanguage().name())
                 .name(card.getName())
-                .price(card.getPrice())
+                .price(FormatterUtil.convertMoney(card.getPrice()))
                 .build();
-        this.createCardInDatabase(cardEntity);
+            this.createCardInDatabase(cardEntity);
+        } catch (RuntimeException e) {
+            log.error("Error on MagicCardsService :: createMagicCard :: Error={}", e.getMessage(), e);
+            return MagicCardResponseDTO.builder()
+                    .status(MagicCardsKeys.ERROR_CODE_PROJECT)
+                    .card(MagicCardDTO.builder().build())
+                    .message(MagicCardsKeys.ERROR_MESSAGE)
+                    .build();
+        }
         var response = MagicCardResponseDTO.builder()
                 .status(HttpStatus.OK.value())
                 .card(card)
-                .message("CARTA CRIADA COM SUCESSO")
+                .message(MagicCardsKeys.SUCCESS_MESSAGE)
                 .build();
         log.info("End MagicCardsService :: createMagicCard :: Response={}",gson.toJson(card));
         return response;

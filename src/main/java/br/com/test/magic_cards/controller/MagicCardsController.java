@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/magic_cards")
 public class MagicCardsController {
-
     @Autowired private MagicCardsService service;
-
     @PostMapping("/createMagicCard")
     public ResponseEntity<MagicCardResponseDTO> createMagicCard(
             @RequestHeader ("ListIndex") Integer listIndex,
@@ -20,5 +18,4 @@ public class MagicCardsController {
     ) {
         return ResponseEntity.ok().body(service.createMagicCard(magicCard));
     }
-
 }
