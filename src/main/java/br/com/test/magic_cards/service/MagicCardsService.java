@@ -1,7 +1,6 @@
 package br.com.test.magic_cards.service;
 
 import br.com.test.magic_cards.dao.MagicCardDao;
-import br.com.test.magic_cards.model.dto.CardsListDTO;
 import br.com.test.magic_cards.model.dto.MagicCardDTO;
 import br.com.test.magic_cards.model.dto.MagicCardResponseDTO;
 import br.com.test.magic_cards.model.entities.Card;
@@ -13,26 +12,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-
 @Slf4j
 @Service
 public class MagicCardsService {
 
     @Autowired private CardsListInterface cardsListInterface;
     private final Gson gson = new Gson();
-
-    public void createCardsList(String listName) {
-        log.info("Init MagicCardsService :: createCardsList :: ListName={}",listName);
-        var list = new ArrayList<MagicCardDTO>();
-        var cardList = CardsListDTO.builder().cards(list).listName(listName).build();
-    }
-
-    public CardsListDTO getCardsList(Integer index) {
-        log.info("Init MagicCardsService :: getCardsList :: Index={}",index);
-        var cardsList = cardsListInterface.findByIndex(index);
-        return CardsListDTO.builder().listName(cardsList.getListName()).cards(new ArrayList<>()).build();
-    }
 
     public MagicCardResponseDTO createMagicCard(MagicCardDTO card) {
         log.info("Init MagicCardsService :: createMagicCard :: Card={}",gson.toJson(card));
@@ -51,10 +36,6 @@ public class MagicCardsService {
                 .build();
         log.info("End MagicCardsService :: createMagicCard :: Response={}",gson.toJson(card));
         return response;
-    }
-
-    private void addCardInList(Integer indexList, MagicCardDTO card) {
-
     }
 
     private void createCardInDatabase(Card card) {

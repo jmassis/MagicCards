@@ -7,20 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/magic_cards")
 public class MagicCardsController {
 
     @Autowired private MagicCardsService service;
-
-//    @GetMapping("/getCardsList")
-//    public ResponseEntity<List<MagicCardDTO>> getCardsList(
-//        @RequestHeader ("ListIndex") Integer listIndex
-//    ) {
-//
-//    }
 
     @PostMapping("/createMagicCard")
     public ResponseEntity<MagicCardResponseDTO> createMagicCard(

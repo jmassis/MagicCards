@@ -9,8 +9,6 @@ public class JPAUtil {
     public static EntityManager getEntityManager() {
         return FACTORY.createEntityManager();
     }
-
     private static final EntityManagerFactory FACTORY = Persistence
             .createEntityManagerFactory("cards");
-
 }

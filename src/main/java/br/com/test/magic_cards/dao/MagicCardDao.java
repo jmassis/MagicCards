@@ -14,9 +14,4 @@ public class MagicCardDao {
     public void create(Card card) {
         this.entityManager.persist(card);
     }
-
-    public void update(Card card) {
-        this.entityManager.merge(card);
-    }
-
 }
