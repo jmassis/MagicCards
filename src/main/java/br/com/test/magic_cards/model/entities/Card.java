@@ -1,5 +1,6 @@
 package br.com.test.magic_cards.model.entities;
 
+import br.com.test.magic_cards.model.enums.LanguageEnum;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -20,7 +21,7 @@ public class Card {
     private Integer index;
     private String name;
     private String edition;
-    private String language;
+    private LanguageEnum language;
     private boolean foil;
     private Double price;
     private Integer similarCards;

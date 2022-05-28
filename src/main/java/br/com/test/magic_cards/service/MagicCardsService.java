@@ -4,7 +4,6 @@ import br.com.test.magic_cards.dao.MagicCardDao;
 import br.com.test.magic_cards.model.dto.MagicCardDTO;
 import br.com.test.magic_cards.model.dto.MagicCardResponseDTO;
 import br.com.test.magic_cards.model.entities.Card;
-import br.com.test.magic_cards.repository.CardsListInterface;
 import br.com.test.magic_cards.util.JPAUtil;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
@@ -15,8 +14,6 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class MagicCardsService {
-
-    @Autowired private CardsListInterface cardsListInterface;
     private final Gson gson = new Gson();
 
     public MagicCardResponseDTO createMagicCard(MagicCardDTO card) {

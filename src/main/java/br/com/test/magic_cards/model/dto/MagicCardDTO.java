@@ -1,5 +1,6 @@
 package br.com.test.magic_cards.model.dto;
 
+import br.com.test.magic_cards.model.enums.LanguageEnum;
 import lombok.*;
 
 @Getter
@@ -12,7 +13,7 @@ public class MagicCardDTO {
     private Integer indexList;
     private String name;
     private String edition;
-    private String language;
+    private LanguageEnum language;
     private boolean foil;
     private Double price;
     private Integer similarCards;
