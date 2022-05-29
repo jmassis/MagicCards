@@ -32,13 +32,11 @@ public class MagicCardsService {
             log.error("Error on MagicCardsService :: createMagicCard :: Error={}", e.getMessage(), e);
             return MagicCardResponseDTO.builder()
                     .status(MagicCardsKeys.ERROR_CODE_PROJECT)
-                    .card(MagicCardDTO.builder().build())
                     .message(MagicCardsKeys.ERROR_MESSAGE)
                     .build();
         }
         var response = MagicCardResponseDTO.builder()
                 .status(HttpStatus.OK.value())
-                .card(card)
                 .message(MagicCardsKeys.SUCCESS_MESSAGE)
                 .build();
         log.info("End MagicCardsService :: createMagicCard :: Response={}",gson.toJson(card));

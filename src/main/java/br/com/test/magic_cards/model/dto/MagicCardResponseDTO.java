@@ -10,5 +10,4 @@ import lombok.*;
 public class MagicCardResponseDTO {
     private Integer status;
     private String message;
-    private MagicCardDTO card;
 }
