@@ -27,7 +27,7 @@ public class MagicCardsService {
     private final Gson gson = new Gson();
 
     public CardListResponseDTO getCardList(Integer orderId) {
-        log.info("Init MagicCardsService :: getCardList :: OrderId={}",gson.toJson(orderId));
+        log.info("Init MagicCardsService :: getCardList :: OrderId={}",orderId);
         var cardList = new ArrayList<CardDTO>();
         try {
             var cardEntityList = repository.findAll();
