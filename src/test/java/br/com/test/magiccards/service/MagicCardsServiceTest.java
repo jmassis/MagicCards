@@ -41,6 +41,12 @@ class MagicCardsServiceTest {
     }
 
     @Test
+    void testGetCardListWithError() {
+        Mockito.when(repository.findAll()).thenThrow(NullPointerException.class);
+        assertThrows(CardException.class, () -> service.getCardList(2));
+    }
+
+    @Test
     void testCreateCard() {
         var cardDTO = CardDTO.builder()
                 .name("name")

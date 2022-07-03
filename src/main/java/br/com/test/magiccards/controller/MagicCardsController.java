@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/magic-cards")
 public class MagicCardsController {
+
     @Autowired private MagicCardsService service;
 
     @GetMapping
