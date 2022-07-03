@@ -3,16 +3,19 @@ package br.com.test.magic_cards.model.dto;
 import br.com.test.magic_cards.model.enums.LanguageEnum;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class MagicCardDTO {
+public class CardDTO {
+    private Integer id;
     private String name;
     private String edition;
     private LanguageEnum language;
     private boolean foil;
-    private Double price;
+    private BigDecimal price;
     private Integer similarCards;
 }

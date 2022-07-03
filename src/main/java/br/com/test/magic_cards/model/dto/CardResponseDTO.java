@@ -7,7 +7,6 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class MagicCardResponseDTO {
-    private Integer status;
+public class CardResponseDTO {
     private String message;
 }
