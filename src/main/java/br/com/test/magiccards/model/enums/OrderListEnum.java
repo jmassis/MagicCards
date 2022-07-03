@@ -1,4 +1,4 @@
-package br.com.test.magic_cards.model.enums;
+package br.com.test.magiccards.model.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,6 +1,6 @@
-package br.com.test.magic_cards.repository;
+package br.com.test.magiccards.repository;
 
-import br.com.test.magic_cards.model.entities.Card;
+import br.com.test.magiccards.model.entities.Card;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

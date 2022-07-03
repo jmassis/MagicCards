@@ -1,4 +1,4 @@
-package br.com.test.magic_cards.keys;
+package br.com.test.magiccards.keys;
 
 public final class ControllerKeys {
     public static final String GET_CARD_LIST_ORDER = "order";

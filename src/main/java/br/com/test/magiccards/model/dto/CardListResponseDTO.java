@@ -1,4 +1,4 @@
-package br.com.test.magic_cards.model.dto;
+package br.com.test.magiccards.model.dto;
 
 import lombok.*;
 

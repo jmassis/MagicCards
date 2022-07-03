@@ -1,14 +1,14 @@
-package br.com.test.magic_cards.service;
+package br.com.test.magiccards.service;
 
-import br.com.test.magic_cards.exceptions.CardException;
-import br.com.test.magic_cards.keys.MessageKeys;
-import br.com.test.magic_cards.model.dto.CardDTO;
-import br.com.test.magic_cards.model.dto.CardListResponseDTO;
-import br.com.test.magic_cards.model.dto.CardResponseDTO;
-import br.com.test.magic_cards.model.entities.Card;
-import br.com.test.magic_cards.model.enums.OrderListEnum;
-import br.com.test.magic_cards.repository.MagicCardRepository;
-import br.com.test.magic_cards.util.MagicCardsUtil;
+import br.com.test.magiccards.exceptions.CardException;
+import br.com.test.magiccards.keys.MessageKeys;
+import br.com.test.magiccards.model.dto.CardDTO;
+import br.com.test.magiccards.model.dto.CardListResponseDTO;
+import br.com.test.magiccards.model.dto.CardResponseDTO;
+import br.com.test.magiccards.model.entities.Card;
+import br.com.test.magiccards.model.enums.OrderListEnum;
+import br.com.test.magiccards.repository.MagicCardRepository;
+import br.com.test.magiccards.util.MagicCardsUtil;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

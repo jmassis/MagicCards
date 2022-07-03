@@ -1,11 +1,11 @@
-package br.com.test.magic_cards.service;
+package br.com.test.magiccards.service;
 
-import br.com.test.magic_cards.exceptions.CardException;
-import br.com.test.magic_cards.keys.MessageKeys;
-import br.com.test.magic_cards.model.dto.CardDTO;
-import br.com.test.magic_cards.model.entities.Card;
-import br.com.test.magic_cards.model.enums.LanguageEnum;
-import br.com.test.magic_cards.repository.MagicCardRepository;
+import br.com.test.magiccards.exceptions.CardException;
+import br.com.test.magiccards.keys.MessageKeys;
+import br.com.test.magiccards.model.dto.CardDTO;
+import br.com.test.magiccards.model.entities.Card;
+import br.com.test.magiccards.model.enums.LanguageEnum;
+import br.com.test.magiccards.repository.MagicCardRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentMatchers;

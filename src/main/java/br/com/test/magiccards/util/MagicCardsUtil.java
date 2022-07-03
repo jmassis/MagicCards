@@ -1,9 +1,9 @@
-package br.com.test.magic_cards.util;
+package br.com.test.magiccards.util;
 
-import br.com.test.magic_cards.model.dto.CardDTO;
-import br.com.test.magic_cards.model.entities.Card;
-import br.com.test.magic_cards.model.enums.LanguageEnum;
-import br.com.test.magic_cards.repository.MagicCardRepository;
+import br.com.test.magiccards.model.dto.CardDTO;
+import br.com.test.magiccards.model.entities.Card;
+import br.com.test.magiccards.model.enums.LanguageEnum;
+import br.com.test.magiccards.repository.MagicCardRepository;
 
 public class MagicCardsUtil {
     public static boolean validateCardAlreadyExists(Card newCard, MagicCardRepository repository) {

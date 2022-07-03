@@ -1,4 +1,4 @@
-package br.com.test.magic_cards.exceptions;
+package br.com.test.magiccards.exceptions;
 
 import lombok.Getter;
 

@@ -1,4 +1,4 @@
-package br.com.test.magic_cards.keys;
+package br.com.test.magiccards.keys;
 
 public final class MessageKeys {
     public static final String SUCCESS_MESSAGE_CREATE = "CARTA CRIADA COM SUCESSO";

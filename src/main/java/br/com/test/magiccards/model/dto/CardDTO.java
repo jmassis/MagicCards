@@ -1,6 +1,6 @@
-package br.com.test.magic_cards.model.dto;
+package br.com.test.magiccards.model.dto;
 
-import br.com.test.magic_cards.model.enums.LanguageEnum;
+import br.com.test.magiccards.model.enums.LanguageEnum;
 import lombok.*;
 
 import java.math.BigDecimal;

@@ -1,10 +1,10 @@
-package br.com.test.magic_cards.controller;
+package br.com.test.magiccards.controller;
 
-import br.com.test.magic_cards.keys.ControllerKeys;
-import br.com.test.magic_cards.model.dto.CardDTO;
-import br.com.test.magic_cards.model.dto.CardListResponseDTO;
-import br.com.test.magic_cards.model.dto.CardResponseDTO;
-import br.com.test.magic_cards.service.MagicCardsService;
+import br.com.test.magiccards.keys.ControllerKeys;
+import br.com.test.magiccards.model.dto.CardDTO;
+import br.com.test.magiccards.model.dto.CardListResponseDTO;
+import br.com.test.magiccards.model.dto.CardResponseDTO;
+import br.com.test.magiccards.service.MagicCardsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

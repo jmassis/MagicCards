@@ -1,7 +1,7 @@
-package br.com.test.magic_cards.config;
+package br.com.test.magiccards.config;
 
-import br.com.test.magic_cards.exceptions.CardException;
-import br.com.test.magic_cards.model.dto.CardResponseDTO;
+import br.com.test.magiccards.exceptions.CardException;
+import br.com.test.magiccards.model.dto.CardResponseDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

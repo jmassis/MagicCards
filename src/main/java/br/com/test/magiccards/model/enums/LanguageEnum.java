@@ -1,4 +1,4 @@
-package br.com.test.magic_cards.model.enums;
+package br.com.test.magiccards.model.enums;
 
 public enum LanguageEnum {
     PORTUGUESE,
